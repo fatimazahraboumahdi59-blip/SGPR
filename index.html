@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Login SGPR</title>
+<style>
+body{
+    font-family: Arial;
+    background:#E0D4B9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    width:280px;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    cursor:pointer;
+    background:rgb(32, 114, 59);
+    color:white;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h3>Login SGPR🔐</h3>
+
+    <input type="text" id="username" placeholder="Nom d'utilisateur">
+    <input type="password" id="password" placeholder="Mot de passe">
+
+    <button onclick="login()">Connexion</button>
+    .
+    <button onclick="changeAccount()">
+Modifier compte
+</button>
+
+</div>
+
+<script>
+
+// إنشاء معلومات افتراضية أول مرة
+if (!localStorage.getItem("username")) {
+    localStorage.setItem("username", "Administrateur");
+    localStorage.setItem("password", "SGPR2026");
+}
+
+
+function login(){
+
+    let u = document.getElementById("username").value;
+    let p = document.getElementById("password").value;
+
+    let savedUser = localStorage.getItem("username");
+    let savedPass = localStorage.getItem("password");
+
+
+    if(u === savedUser && p === savedPass){
+        window.location.href = "index.html";
+    } 
+    else {
+        alert("Erreur ❌");
+    }
+}
+
+
+// تغيير الحساب
+function changeAccount(){
+
+    let newUser = prompt("Nouveau nom d'utilisateur:");
+    let newPass = prompt("Nouveau mot de passe:");
+
+    if(newUser && newPass){
+
+        localStorage.setItem("username", newUser);
+        localStorage.setItem("password", newPass);
+
+        alert("Compte modifié avec succès ✅");
+    }
+}
+
+</script>
+
+</body>
+</html>
