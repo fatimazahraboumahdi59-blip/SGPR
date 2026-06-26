@@ -1,0 +1,131 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#f5efe3;
+color:#2f4f2f;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+border-radius:50%;
+object-fit:cover;
+}
+
+nav a{
+margin-left:15px;
+text-decoration:none;
+color:#1f6b38;
+font-weight:bold;
+}
+
+.user{
+color:#1f6b38;
+font-weight:bold;
+}
+
+.title{
+text-align:center;
+margin:30px;
+}
+
+.title img{
+width:80px;
+height:80px;
+border-radius: 100%;
+}
+
+.container{
+width:90%;
+margin:auto;
+}
+
+.admin-box{
+margin-bottom:20px;
+}
+
+#adminPrice{
+padding:10px;
+width:250px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+border-radius:10px;
+overflow:hidden;
+}
+
+th{
+background:#e8f0df;
+padding:12px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+input{
+width:100%;
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.add-btn{
+margin-top:15px;
+background:#1f6b38;
+color:white;
+padding:10px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.save{
+margin-top:15px;
+background:#1f6b38;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+#result{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+}
+
+footer{
+margin-top:40px;
+text-align:center;
+padding:15px;
+background:#1f6b38;
+color:white;
+}
