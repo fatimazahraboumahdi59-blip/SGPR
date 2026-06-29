@@ -1,2 +1,2 @@
 # SGPR
-My second web development project 
+Our second web development project about SGPR
